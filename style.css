@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'monument';
+  src: url('fonts/MonumentExtended-Regular.otf') format('opentype');
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -6,9 +12,11 @@
 html,body{
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 #main{
+    top: 4%;
     width: 100%;
     height: 100%;
     position: relative;
@@ -18,11 +26,95 @@ html,body{
     
 }
 #main img{
-    height: 600px;
+    height: 1200px;
+    
+    position: absolute;
+    z-index: 100;
 }
 
 #scrolldiv{
     position: absolute;
     top: 20%;
     width: 100%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x:auto;
+}
+#scrolldiv h1{
+    display: inline-block;
+    font-size :150px;
+    font-family:monument;
+    text-transform: uppercase;
+    margin-right: 20px;
+    letter-spacing: 4px;
+    
+}
+
+#scrolldiv::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+#scrolldiv2{
+    position: absolute;
+    top: 43%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x:auto;
+}
+#scrolldiv2 h1{
+    position: relative;
+    display: inline-block;
+    font-size :150px;
+    font-family:monument;
+    text-transform: uppercase;
+    margin-right: 20px;
+    letter-spacing: 4px;
+    z-index: 200;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+}
+
+#scrolldiv2::-webkit-scrollbar {
+    display: none;
+}
+
+#scrolldiv3{
+    position: absolute;
+    top: 65%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x:auto;
+}
+#scrolldiv3 h1{
+    display: inline-block;
+    font-size :150px;
+    font-family:monument;
+    text-transform: uppercase;
+    margin-right: 20px;
+    letter-spacing: 4px;
+   
+}
+
+#scrolldiv3::-webkit-scrollbar {
+    display: none;
+}
+
+
+#ptext{
+    position: absolute;
+    top: 2%;
+    width: 69%;
+    text-align: center;
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000;
+    z-index: 300;
+    text-transform: uppercase;
+    font-weight: 600;
+
+
 }
